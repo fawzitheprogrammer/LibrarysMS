@@ -59,7 +59,7 @@ namespace LibraryMS.Forms
         private void loginBtn_Click(object sender, EventArgs e)
         {
 
-            // C:\Users\SOFTWARE\Documents
+            // C:\Users\USERNAME\Documents
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\lib_ms";
             if (!File.Exists(path))
             {
@@ -67,7 +67,6 @@ namespace LibraryMS.Forms
             }
             else
             {
-                Console.WriteLine(login.Position + "" + login.Username);
                 if (MainClass.mainClass.checkControls(loginPanel).Count > 0)
                 {
                     MainClass.mainClass.showMessage("Please fill out all fields to continue", false);
@@ -88,8 +87,6 @@ namespace LibraryMS.Forms
                         {
                             this.Hide();
                             dashboard mf = new dashboard();
-                          /*  mf.staffBtn.Hide();
-                            mf.roles.Hide();*/
                             mf.Show();
 
                         }

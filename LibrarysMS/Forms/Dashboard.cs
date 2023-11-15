@@ -28,7 +28,7 @@ namespace LibraryMS
             Books books = new Books();
             books.ShowDialog();
         }
-
+        //------------------------------------ 
         private void dashboard_Load(object sender, EventArgs e)
         {
 
@@ -48,7 +48,7 @@ namespace LibraryMS
         {
 
         }
-
+        //- ---------------------------------
         private void borrowers_Click(object sender, EventArgs e)
         {
             Borrower borrower = new Borrower();
@@ -72,6 +72,18 @@ namespace LibraryMS
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            BookEdition bookEdition = new BookEdition();
+            bookEdition.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BookLanguage bookLanguage = new BookLanguage();
+            bookLanguage.ShowDialog();
         }
     }
 }

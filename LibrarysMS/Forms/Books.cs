@@ -39,6 +39,10 @@ namespace LibrarysMS.Forms
             listBox.Items.Add(Author);
             listBox.Items.Add(Genre);
             listBox.Items.Add(Quantity);
+            listBox.Items.Add(Language);
+            listBox.Items.Add(Editions);
+            listBox.Items.Add(PublicationYear);
+            
             
 
             CRUD.crud.loadData("GetBooks", dataGridView1, listBox);
@@ -53,12 +57,15 @@ namespace LibrarysMS.Forms
             try
             {
                 CRUD.crud.loadRole("GetGenres", comboBox1, "GenreID", "Name");
+                CRUD.crud.loadRole("GetLanguage", book_language, "LanguageID", "Language");
+                CRUD.crud.loadRole("GetEditions", book_editions, "EditionID", "Edition");
             }
             catch (Exception ex)
             {
                 mainClass.showMessage(ex.ToString(), false);
             }
         }
+
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
@@ -75,6 +82,9 @@ namespace LibrarysMS.Forms
                     { "@Title", titleTXTs.Texts },
                     { "@Author", authorTXT.Texts },
                     { "@GenreID", Convert.ToInt32(comboBox1.SelectedValue.ToString()) },
+                    { "@LanguageID", Convert.ToInt32(book_language.SelectedValue.ToString()) },
+                    { "@EditionID", Convert.ToInt32(book_editions.SelectedValue.ToString()) },
+                    { "@PublicationYear", publication_year.Texts },
                     { "@Quantity", qtyTXT.Texts }
                 };
                 CRUD.crud.DataInsertUpdateDelete("InsertBook", ht, "Data inserted");
@@ -104,6 +114,7 @@ namespace LibrarysMS.Forms
                 bookID = Convert.ToInt32(row.Cells["BookIDs"].Value);
                 
                 titleTXTs.Texts = row.Cells["Title"].Value.ToString();
+                publication_year.Texts = row.Cells["PublicationYear"].Value.ToString();
                 authorTXT.Texts = row.Cells["Author"].Value.ToString();
                 comboBox1.SelectedItem = row.Cells["Genre"].Value.ToString();
                 qtyTXT.Texts = row.Cells["Quantity"].Value.ToString();
@@ -137,10 +148,12 @@ namespace LibrarysMS.Forms
 
                 Hashtable ht = new Hashtable
                 {
-                    {"@BookID",bookID },
                     { "@Title", titleTXTs.Texts },
                     { "@Author", authorTXT.Texts },
                     { "@GenreID", Convert.ToInt32(comboBox1.SelectedValue.ToString()) },
+                    { "@LanguageID", Convert.ToInt32(book_language.SelectedValue.ToString()) },
+                    { "@EditionID", Convert.ToInt32(book_editions.SelectedValue.ToString()) },
+                    { "@PublicationYear", publication_year.Texts },
                     { "@Quantity", qtyTXT.Texts }
                 };
                 CRUD.crud.DataInsertUpdateDelete("UpdateBook", ht, "Data Updated");
@@ -170,9 +183,16 @@ namespace LibrarysMS.Forms
 
         public void EmptyTextBoxs(Panel p)
         {
-            foreach (RJTextBox tb in p.Controls)
+            foreach (Control c in p.Controls)
             {
-                tb.Texts = "";
+                if(c is RJTextBox)
+                {
+                    RJTextBox tb = (RJTextBox)c;
+                    if (tb.Texts == "")
+                    {
+                        tb.Texts = "";
+                    }
+                }
             }
         }
 
@@ -213,6 +233,11 @@ namespace LibrarysMS.Forms
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void titleTXTs__TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

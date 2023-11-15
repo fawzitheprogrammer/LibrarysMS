@@ -55,9 +55,10 @@
             this.delete.FillColor = System.Drawing.Color.Silver;
             this.delete.Font = new System.Drawing.Font("Rabar_043", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.ForeColor = System.Drawing.Color.White;
-            this.delete.Location = new System.Drawing.Point(3, 211);
+            this.delete.Location = new System.Drawing.Point(2, 142);
+            this.delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(429, 53);
+            this.delete.Size = new System.Drawing.Size(286, 34);
             this.delete.TabIndex = 43;
             this.delete.Text = "Delete";
             this.delete.Click += new System.EventHandler(this.delete_Click);
@@ -72,9 +73,10 @@
             this.update.FillColor = System.Drawing.Color.Goldenrod;
             this.update.Font = new System.Drawing.Font("Rabar_043", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.ForeColor = System.Drawing.Color.White;
-            this.update.Location = new System.Drawing.Point(3, 152);
+            this.update.Location = new System.Drawing.Point(2, 104);
+            this.update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(429, 53);
+            this.update.Size = new System.Drawing.Size(286, 34);
             this.update.TabIndex = 42;
             this.update.Text = "Update";
             this.update.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -89,9 +91,10 @@
             this.loginBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.loginBtn.Font = new System.Drawing.Font("Rabar_043", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(3, 93);
+            this.loginBtn.Location = new System.Drawing.Point(2, 66);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(429, 53);
+            this.loginBtn.Size = new System.Drawing.Size(286, 34);
             this.loginBtn.TabIndex = 41;
             this.loginBtn.Text = "Save";
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
@@ -107,15 +110,14 @@
             this.titleTXTs.BorderSize = 1;
             this.titleTXTs.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleTXTs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.titleTXTs.Location = new System.Drawing.Point(4, 40);
-            this.titleTXTs.Margin = new System.Windows.Forms.Padding(4);
+            this.titleTXTs.Location = new System.Drawing.Point(3, 28);
             this.titleTXTs.Multiline = false;
             this.titleTXTs.Name = "titleTXTs";
-            this.titleTXTs.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.titleTXTs.Padding = new System.Windows.Forms.Padding(7, 5, 7, 5);
             this.titleTXTs.PasswordChar = false;
             this.titleTXTs.PlaceholderColor = System.Drawing.SystemColors.ControlText;
             this.titleTXTs.PlaceholderText = "";
-            this.titleTXTs.Size = new System.Drawing.Size(427, 46);
+            this.titleTXTs.Size = new System.Drawing.Size(285, 33);
             this.titleTXTs.TabIndex = 36;
             this.titleTXTs.Texts = "";
             this.titleTXTs.UnderlinedStyle = false;
@@ -124,9 +126,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 36);
+            this.label1.Size = new System.Drawing.Size(55, 25);
             this.label1.TabIndex = 44;
             this.label1.Text = "Genre";
             // 
@@ -139,8 +142,9 @@
             this.flowLayoutPanel1.Controls.Add(this.delete);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(437, 1047);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(291, 681);
             this.flowLayoutPanel1.TabIndex = 47;
             // 
             // dataGridView1
@@ -170,14 +174,15 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(437, 0);
+            this.dataGridView1.GridColor = System.Drawing.Color.DodgerBlue;
+            this.dataGridView1.Location = new System.Drawing.Point(291, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1235, 1047);
+            this.dataGridView1.Size = new System.Drawing.Size(824, 681);
             this.dataGridView1.TabIndex = 46;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -187,7 +192,7 @@
             this.ID.HeaderText = "NO.";
             this.ID.MinimumWidth = 8;
             this.ID.Name = "ID";
-            this.ID.Width = 89;
+            this.ID.Width = 64;
             // 
             // BookIDs
             // 
@@ -206,12 +211,13 @@
             // 
             // Genre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1672, 1047);
+            this.ClientSize = new System.Drawing.Size(1115, 681);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Genre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Genre";

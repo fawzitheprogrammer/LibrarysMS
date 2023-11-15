@@ -44,13 +44,20 @@ namespace LibrarysMS.Forms
             listBox.Items.Add(Address);
             listBox.Items.Add(Phone);
             listBox.Items.Add(Book);
+            listBox.Items.Add(Author);
+            listBox.Items.Add(GenreID);
+            listBox.Items.Add(Genre);
             listBox.Items.Add(BorrowDate);
             listBox.Items.Add(ReturnsDate);
             listBox.Items.Add(Quantity);
             listBox.Items.Add(BookIDs);
+            listBox.Items.Add(Langauge);
+            listBox.Items.Add(Edition);
 
 
             CRUD.crud.loadData("GetBorrowers", dataGridView1, listBox);
+            CRUD.crud.loadRole("GetLanguage", book_language, "LanguageID", "Language");
+            CRUD.crud.loadRole("GetEditions", book_editions, "EditionID", "Edition");
 
 
         }
@@ -87,8 +94,10 @@ namespace LibrarysMS.Forms
                     { "@BorrowedBookID", Convert.ToInt32(books.SelectedValue.ToString())  },
                     { "@BorrowedBookQty", BQty.Texts  },
                     { "@BorrowDate", DateTime.Now  },
-                    { "ReturnDate", returnDate.Value  }
-
+                    { "@ReturnDate", returnDate.Value  },
+                    { "@BookLanguage", Convert.ToInt32(book_language.SelectedValue.ToString()) },
+                    { "@BookEditions", Convert.ToInt32(book_editions.SelectedValue.ToString()) },
+                    
                 };
                 CRUD.crud.DataInsertUpdateDelete("InsertBorrower", ht, "Data inserted");
 

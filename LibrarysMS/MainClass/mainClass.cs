@@ -122,7 +122,7 @@ namespace MainClass
                             }
                         }
                         tb.BorderColor = tb.Texts == "" ? tb.BorderColor = Color.Firebrick : tb.BorderColor = Color.Blue;
-                        tb.ForeColor = tb.Texts == "" ? tb.ForeColor = Color.White : tb.ForeColor = Color.Black;
+                        tb.ForeColor = tb.Texts == "" ? tb.ForeColor = Color.Black : tb.ForeColor = Color.Black;
                     }
                 }
                 if (c is ComboBox)
